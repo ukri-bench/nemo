@@ -49,7 +49,7 @@ class Nemo(Package):
     depends_on("mpi", type="build") # nemo segfaults without mpi even if we aren't using it
     depends_on("hdf5 +shared +fortran +mpi", type="build")
     depends_on("xios@2.5:", type=("build","link"), when="+xios")
-    depends_on("netcdf-c@4.9.0: +mpi +shared", type=("build","link","run"))
+    depends_on("netcdf-c@4.9.0: +mpi +shared", type=("build","link"))
     depends_on("netcdf-fortran@4.6.1: +shared", type="build")
     depends_on("py-psyclone", type="build", when="+openmp")
 

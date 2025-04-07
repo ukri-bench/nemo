@@ -25,6 +25,10 @@ jobs:
         buildcache: true    # Configure oci://ghcr.io/spack/github-actions-buildcache
         color: true         # Force color output (SPACK_COLOR=always)
         path: spack         # Where to clone Spack
+    - name: Install gnuplot
+      run: |
+        sudo apt-get update
+        sudo apt-get install gnuplot
     # Make sure `spack` command works
     - name: Spack version number
       shell: bash
